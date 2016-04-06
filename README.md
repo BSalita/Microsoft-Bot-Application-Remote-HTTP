@@ -32,6 +32,8 @@ Steps to execute:
 
 4. Use Microsoft Bot Framework Emulator to communicate with the app. You should see echoing of anything that you've entered. Enter the following, use default values for other boxes.
 
-Url: http://www.example.com:3978/api/messages
-App Id: YourAppId
-App Secret: YourAppSecret
+  ```
+  Url: http://www.example.com:3978/api/messages
+  App Id: YourAppId
+  App Secret: YourAppSecret
+  ```
