@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 
 namespace Microsoft_Bot_Application_Remote_HTTP
 {
-    [BotAuthentication]
+    //[BotAuthentication] // patch - Must be removed to disable Basic Authentication. HTTP requires that Basic Authentication be disabled.
     public class MessagesController : ApiController
     {
         /// <summary>
