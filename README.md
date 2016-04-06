@@ -7,7 +7,7 @@ The project was created in Visual Studio 2015 Community Edition using New->Proje
 
 1. In MessageController.cs, commented out [BotAuthentication] attribute. This change disables Basic Authentication. HTTP causes AppID and AppSecret to not be sent to the server. Disabling Basic Authentication is required to avoid HTTP authentication errors.
 
-2. In .vs/applicationhost.config, an XML file, added a second binding (first being local host) which contains my system's hostname. This enables access to this app from the internet. Change www.example.com to be your systems ip address/name. I developed this app on a computer on my home network. To make my development notebook into a internet server, I had to punch a hole in the internet router and forward port 3978 to my server's computer's IP address. I used a dynamic dns address, worked fine.
+2. In .vs/applicationhost.config, an XML file, added a second binding (first being local host) which contains my system's hostname. This enables access to this app from the internet. Change www.example.com to be your systems ip address/name. I developed this app on a computer on my home network. To make my development notebook into a internet server, I had to punch a hole in the internet router and forward port 3978 to my server's IP address. I used a dynamic dns address, worked fine.
 
   ```xml
   <binding protocol="http" bindingInformation="*:3978:www.example.com" />
