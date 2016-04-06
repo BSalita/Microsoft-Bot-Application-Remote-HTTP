@@ -7,7 +7,7 @@ The project was created in Visual Studio 2015 Community Edition using New->Proje
 
 1. In MessageController.cs, commented out [BotAuthentication] attribute. This change disables Basic Authentication. HTTP causes AppID and AppSecret to not be sent to the server. Disabling Basic Authentication is required to avoid HTTP authentication errors.
 
-2. In .vs/applicationhost.config, an XML file, added hostname to enable access to app over internet. Change www.example.com to be your systems ip address/name. I developed this app on a computer on my home network. To make my development notebook into a internet server, I had to punch a hole in the internet router and forward port 3978 to my server's computer's IP address.
+2. In .vs/applicationhost.config, an XML file, added hostname to enable access to app over internet. Change www.example.com to be your systems ip address/name. I developed this app on a computer on my home network. To make my development notebook into a internet server, I had to punch a hole in the internet router and forward port 3978 to my server's computer's IP address. I used a dynamic dns address, worked fine.
 
   ```xml
   <binding protocol="http" bindingInformation="*:3978:www.example.com" />
@@ -28,6 +28,10 @@ Steps to execute:
 
 2. Open this repos in Visual Studio 2015 as Administrator. Administrator is required for remote access, although not for localhost.
 
-3. Execute, you should see IIS Express appear in the status bar. Your default browser will be invoked using "http://localhost:3978".
+3. Execute. You should see IIS Express appear in the status bar. Your default browser will be invoked using http://localhost:3978.
 
-4. Use Microsoft Bot Framework Emulator to communicate with the app. You should see echoing of anything that you've entered.
+4. Use Microsoft Bot Framework Emulator to communicate with the app. You should see echoing of anything that you've entered. Enter the following, use default values for other boxes.
+
+  Url: http://www.example.com:3978/api/messages
+  App Id: YourAppId
+  App Secret: YourAppSecret
