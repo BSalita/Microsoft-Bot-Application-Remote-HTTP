@@ -9,14 +9,18 @@ The project was created in Visual Studio 2015 Community Edition using New->Proje
 
 2. In .vs/applicationhost.config, an XML file, added hostname to enable access to app over internet. Change www.example.com to be your systems ip address/name. I developed this app on a computer on my home network. To make my development notebook into a internet server, I had to punch a hole in the internet router and forward port 3978 to my server's computer's IP address.
 
+  ```xml
   <binding protocol="http" bindingInformation="*:3978:www.example.com" />
+  ```
   
 3. I see that .vs/applicationhost.config contains some hard coded paths my dev system. You may need to change them to correctly compile.
 
 4. Note that Web.config has not been changed. If we were using HTTPS, YourAppId and YourAppSecret would have to be updated by the documented procedure. Since HTTP is being used, and [BotAuthentication] is disabled, these values are ignored.
 
+  ```xml
     <add key="AppId" value="YourAppId" />
     <add key="AppSecret" value="YourAppSecret" />
+  ```
 
 Steps to execute:
 
